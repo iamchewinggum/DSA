@@ -1,0 +1,162 @@
+
+'''
+find the length of the longest substring wihout
+repeating characters
+
+
+
+'''
+
+
+
+def function(s):
+
+
+    left = 0 #just a varible, that we will be using to scan
+
+    seen = set() #ds does not allow duplicates 
+    #tracks char currently "in" the window 
+
+    max_length = 0 #just a variable 
+
+    for right in range(len(s)): #creates a loop that iterates over indices of sequece s 
+
+    #len(s) is just a number 
+
+    #right is a varible
+    
+    #for right in ... assigns each of those numbers to the
+    #varibale right one at a time 
+
+
+        if seen.add(s[right]):
+            print(s[right])
+        #not only did we try to add right into the set 
+        #we also printed out the right variblel if it was
+        #added to he set 
+
+        left+=1
+        #if right cant be added to the set we move
+        #left by one     
+
+
+
+
+
+
+'''
+
+
+
+left = 0  staring point 
+seen = set() 
+
+
+max_length = 0
+
+
+for right, char in enumerate(s):
+
+if char in seen;
+    print(char)
+    print(char,"was counted for")
+    max_length += 1
+    seen.remove()
+    left = left # i know i am supposed to update left i think, just dont know how to 
+else:
+    seen.add(s[char]):
+    print(s[char])
+    print("char was added")
+
+
+
+return max_length
+
+'''
+
+
+
+'''
+for right/left, char in enumerate(s):
+
+
+
+right/left can be any variable name
+
+enumerate() is a built in python function
+that adds a counter to an iterable 
+and returns it as an enumerate object,
+
+
+allowing simultaneous access to both
+the index and the value of each item during iteration 
+
+no more need
+to manually maintain a counter variable
+making loops more concise and pythonic
+
+
+
+'''
+
+
+
+
+def fucntionkkk (s):
+
+
+
+    left = 0 #so that it can be moved
+    seen = set() 
+
+
+    max_length = 0
+
+    #right is  a value (a number)
+    #char is a variable within in enumerate(s)
+    for right, char in enumerate(s):
+        while char in seen: #using a while instead of an if 
+            seen.remove(s[left])
+            left+=1 #updating the left++
+
+#once that while loop is done
+#we go back to adding to set()
+        seen.add(char)
+
+#once added to set()
+#we calculate 
+
+#using the right and left 
+#having a plus one counting for the fact that we starte at 0
+
+#we do the math for the new_window
+
+#if statement where we compare the max_lenght vs the new window
+#reassign if needed
+
+
+
+
+        new_window = right - left+1
+        if max_length < new_window:
+            max_length = new_window
+            
+
+#once we have gone through all of the string 
+#we return the max_length 
+#once reached the end of the string we return what we have 
+
+    return max_length
+
+
+
+'''
+THIS ONE  BARLITOS 
+THIS ONE BARLITOS 
+THIS ONE BARLITOS 
+THIS ONE BARLITOS
+THIS ONE BARLITOS
+THIS ONE BARLITOS
+THIS ONE BARLTIOS
+THIS ONE BARLITOS
+'''

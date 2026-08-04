@@ -1,0 +1,71 @@
+'''
+sliding window is for problems involving a contiguous subarray
+or substring 
+
+usually "find the longest/shortest/max/min subarray that 
+satisfies some condition"
+
+
+instead of checking every possible subarray (O(n^2) or worse
+
+you maintain a "window" (a range defined by two pointers)
+that expands and shrinks as you scan through once O(n)
+
+
+
+
+
+left = 0
+
+for right in range(len(arr)):
+    # expand the window by including arr[right]
+
+    while <window is invalid>:
+        # shrink the window from the left
+        left += 1
+
+    # window is valid here — update your answer
+'''
+
+
+'''
+give an array: prices
+
+prices[i] is the stock price on the day 
+
+when to buy 
+when to sell
+
+return the max profit possible
+
+
+ex)  prices = [7,1,5,3,6,4] ---> 5
+
+buy at 1, sell at 6 
+'''
+
+
+def function(arr):
+
+    left = 0 #the day you buy (starting it at index 0)
+    max_profit = 0
+
+    for right in range(len(arr)):
+        #this will go through all of the array i think 
+        # expand the window by including arr[right]
+
+        if arr[left] > arr[right]:
+            #if left is more than right 
+            #then we found a new lower 
+
+            # shrink the window from the left
+            left = right 
+            #placing left on the new lower
+        else:
+            profit = arr[right] - arr[left]
+            if profit > max_profit:
+                max_profit = profit
+
+    return max_profit
+        
+
